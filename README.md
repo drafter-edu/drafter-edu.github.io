@@ -61,51 +61,7 @@ def increment_counter(state: State) -> Page:
 start_server(State(0))
 ```
 
-<iframe>
-<html>
-    <head>
-        <script src="https://drafter-edu.github.io/drafter-cdn/skulpt/skulpt.js" type="text/javascript"></script>
-        <script src="https://drafter-edu.github.io/drafter-cdn/skulpt/skulpt-stdlib.js" type="text/javascript"></script>
-        <script src="https://drafter-edu.github.io/drafter-cdn/skulpt/skulpt-drafter.js" type="text/javascript"></script>
-        <script
-            src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"
-        ></script>
-        <script src="website_files.js" type="text/javascript"></script>
-    </head>
-
-    <body>
-<div id="website">
-from drafter import *
-from dataclasses import dataclass
-
-@dataclass
-class State:
-    counter: int
-
-@route
-def index(state: State) -> Page:
-    return Page(state, [
-        "Welcome to Drafter!",
-        "Click the button below.",
-        Button("Increase the count", increment_counter)
-    ])
-
-@route
-def increment_counter(state: State) -> Page:
-    state.counter += 1
-    return Page(state, [
-      "You've clicked the button " + str(state.counter) + " times",
-      Button("Click again", increment_counter)
-    ])
-
-start_server(State(0))
-</div>
-        <script src="https://drafter-edu.github.io/drafter-cdn/skulpt/drafter-setup.js" type="text/javascript"></script>
-    </body>
-</html>
-</iframe>
+{% include counter-example.html %}
 
 # Explore Tutorials
 
