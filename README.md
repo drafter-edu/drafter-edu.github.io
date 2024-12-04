@@ -6,6 +6,18 @@ Drafter is an educational web development library for Python. It enables student
 * [More Examples](https://drafter-edu.github.io/drafter/examples/examples.html)
 * [Deploying Drafter on GitHub Pages](https://drafter-edu.github.io/drafter/students/deployment.html)
 
+# Features
+
+* Web Development Simplified: Build "full-stack" websites with minimal setup.
+* State Management: Use Python dataclasses, lists, dictionaries, or any primitive types as the data model.
+* Interactive Components: Add buttons, text boxes, images, and [more](https://drafter-edu.github.io/drafter/reference/components.html).
+* Fully Testable: Drafter uses a model around simple functions and doesn't rely on global state, making it easy to [test](https://drafter-edu.github.io/drafter/students/testing.html) your sites.
+* Instant Regression Tests: Drafter automatically generates tests cases based on your interactions with the site. No AI needed!
+* Dynamic Content: Create multi-page applications with rich user interaction.
+* Easy Deployment: Use [GitHub Pages](https://drafter-edu.github.io/drafter/students/deployment.html) to deploy your sites; no backend server required!
+
+# Examples and Getting Started
+
 You can install Drafter using your favorite editor's GUI, or via pip on the command line:
 
 ```python
@@ -48,16 +60,6 @@ def increment_counter(state: State) -> Page:
 
 start_server(State(0))
 ```
-
-# Features
-
-* Web Development Simplified: Build "full-stack" websites with minimal setup.
-* State Management: Use Python dataclasses, lists, dictionaries, or any primitive types as the data model.
-* Interactive Components: Add buttons, text boxes, images, and [more](https://drafter-edu.github.io/drafter/reference/components.html).
-* Fully Testable: Drafter uses a model around simple functions and doesn't rely on global state, making it easy to [test](https://drafter-edu.github.io/drafter/students/testing.html) your sites.
-* Instant Regression Tests: Drafter automatically generates tests cases based on your interactions with the site. No AI needed!
-* Dynamic Content: Create multi-page applications with rich user interaction.
-* Easy Deployment: Use [GitHub Pages](https://drafter-edu.github.io/drafter/students/deployment.html) to deploy your sites; no backend server required!
 
 # Explore Tutorials
 
