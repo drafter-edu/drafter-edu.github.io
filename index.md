@@ -5,7 +5,7 @@ feature_text: |
   Drafter is an educational web development library for Python
 excerpt: "Drafter is an educational web development library for Python. It enables students to learn and practice programming concepts by building dynamic, interactive websites."
 ---
-<meta http-equiv="Refresh" content="0; url=https://drafter-edu.github.io/drafter" />
+<!--<meta http-equiv="Refresh" content="0; url=https://drafter-edu.github.io/drafter" />-->
 
 Drafter is an educational web development library for Python. It enables students to learn and practice programming concepts by building dynamic, interactive websites.
 
