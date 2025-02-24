@@ -88,6 +88,9 @@ Ready to learn more? [Check out the student-friendly Drafter Documentation!](htt
 
 Drafter was created to simplify web development for students learning Python. The team includes passionate educators and developers dedicated to advancing programming education.
 
+- Austin Cory Bart ([https://acbart.com/](https://acbart.com))
+- Nazim Karaca
+
 Follow us!
 
 * [GitHub Repository](https://github.com/drafter-edu/drafter)
