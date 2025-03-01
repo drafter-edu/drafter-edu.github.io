@@ -11,9 +11,10 @@ Drafter is an educational web development library for Python. It enables student
 
 * [Drafter Quick Start Guide](https://drafter-edu.github.io/drafter/quickstart/quickstart.html)
 * [Drafter Student Documentation](https://drafter-edu.github.io/drafter/students/docs.html)
-* [Drafter Workbooks]()
+* [Drafter Workbooks](#explore-tutorials)
 * [More Examples](https://drafter-edu.github.io/drafter/examples/examples.html)
 * [Deploying Drafter on GitHub Pages](https://drafter-edu.github.io/drafter/students/deployment.html)
+* [Try Drafter Online (in BlockPy)](https://blockpy.cis.udel.edu/assignments/load?assignment_group_url=drafter_examples)
 
 # Features
 
@@ -70,7 +71,7 @@ def increment_counter(state: State) -> Page:
 start_server(State(0))
 ```
 
-{% include counter-example.html %}
+Want to see it in action and try it yourself? [Try Drafter Online (in BlockPy)](https://blockpy.cis.udel.edu/assignments/load?assignment_group_url=drafter_examples)
 
 # Explore Tutorials
 
@@ -79,6 +80,8 @@ start_server(State(0))
 * [Simple Adventure Game](https://drafter-edu.github.io/drafter/workbook/index.html#simple-adventure-game): Explore a world of decisions and find the treasure.
 * [Store](https://drafter-edu.github.io/drafter/workbook/index.html#store): Create a shop where users can purchase items.
 * More examples can be found [here](https://drafter-edu.github.io/drafter/examples/examples.html)!
+
+We also have this [Google Doc worksheet assignment](https://docs.google.com/document/d/1T2HOqBNXebUUnE6dVRNTLcgE8f4A58IaewJ-LSV1n8k/copy) that we use in our CS1.
 
 # Documentation
 
