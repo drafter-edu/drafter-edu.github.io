@@ -2,100 +2,60 @@
 title: Drafter
 feature_text: |
   ## Drafter
-  Drafter is an educational web development library for Python
-excerpt: "Drafter is an educational web development library for Python. It enables students to learn and practice programming concepts by building dynamic, interactive websites."
+  Build interactive, shareable web applications with the Python students already know.
+excerpt: "Drafter helps students build interactive, shareable web applications using familiar Python concepts such as functions, dataclasses, and lists."
 ---
-<!--<meta http-equiv="Refresh" content="0; url=https://drafter-edu.github.io/drafter" />-->
 
-Drafter is an educational web development library for Python. It enables students to learn and practice programming concepts by building dynamic, interactive websites.
+Drafter is an educational web development library designed for introductory Python courses. Students build interactive websites using familiar Python concepts such as functions, dataclasses, and lists, without needing to learn a separate web programming stack first.
 
-* [Drafter Quick Start Guide](https://drafter-edu.github.io/drafter/quickstart/quickstart.html)
-* [Drafter Student Documentation](https://drafter-edu.github.io/drafter/students/docs.html)
-* [Drafter Workbooks](#explore-tutorials)
-* [More Examples](https://drafter-edu.github.io/drafter/examples/examples.html)
-* [Deploying Drafter on GitHub Pages](https://drafter-edu.github.io/drafter/students/deployment.html)
-* [Try Drafter Online (in BlockPy)](https://blockpy.cis.udel.edu/assignments/load?assignment_group_url=drafter_examples)
+**[Start learning Drafter](https://drafter-edu.github.io/drafter/start/)**
 
-# Features
+New to Drafter? The [Start guide](https://drafter-edu.github.io/drafter/start/) takes you from installation to a working interactive application, then introduces Drafter's debugger and runtime model.
 
-* Web Development Simplified: Build "full-stack" websites with minimal setup.
-* State Management: Use Python dataclasses, lists, dictionaries, or any primitive types as the data model.
-* Interactive Components: Add buttons, text boxes, images, and [more](https://drafter-edu.github.io/drafter/reference/components.html).
-* Fully Testable: Drafter uses a model around simple functions and doesn't rely on global state, making it easy to [test](https://drafter-edu.github.io/drafter/students/testing.html) your sites.
-* Instant Regression Tests: Drafter automatically generates tests cases based on your interactions with the site. No AI needed!
-* Dynamic Content: Create multi-page applications with rich user interaction.
-* Easy Deployment: Use [GitHub Pages](https://drafter-edu.github.io/drafter/students/deployment.html) to deploy your sites; no backend server required!
+You can also:
 
-# Examples and Getting Started
+* [Build guided projects](https://drafter-edu.github.io/drafter/tutorials/) including a virtual pet, story maker, and quiz game.
+* [Browse examples](https://drafter-edu.github.io/drafter/examples/) of complete Drafter applications.
+* [Look up components](https://drafter-edu.github.io/drafter/reference/components/) such as buttons, forms, tables, images, maps, cameras, and audio.
+* [Learn how to publish a project with GitHub Pages](https://drafter-edu.github.io/drafter/your-project/deploy/github-pages/).
+* [Explore the full Drafter documentation](https://drafter-edu.github.io/drafter/), including help, reference material, and guides for building your own project.
 
-You can install Drafter using your favorite editor's GUI, or via pip on the command line:
+# Why Drafter?
 
-```python
-pip install drafter
-```
+Drafter was created for students who know some Python and want to build something they can share with other people.
 
-The simplest Drafter site is quite short:
+A Drafter application uses the same programming ideas students encounter in an introductory Python course:
 
-```python
-from drafter import *
+* **Routes are functions.** Each page is produced by a Python function.
+* **State is explicit.** Application data can be represented with a Python dataclass.
+* **Applications are testable.** Routes can be called directly from tests, so web development reinforces ordinary function testing.
+* **Web interfaces are built from Python components.** Students can add buttons, text boxes, images, tables, forms, maps, media, and other interactive elements without first learning HTML or JavaScript.
+* **Projects can be shared.** Drafter applications can be published as static sites using GitHub Pages.
 
-start_server()
-```
+Drafter deliberately simplifies web development for an introductory course. It does not provide a backend, database, user accounts, or a security boundary. The application runs in the visitor's browser. For a fuller discussion of the design choices and their tradeoffs, see [Why Drafter](https://drafter-edu.github.io/drafter/teach/why-drafter/).
 
-But it's not hard to make something more sophisticated!
+# Teaching with Drafter
 
-```python
-from drafter import *
-from dataclasses import dataclass
+Drafter is intended to fit into an introductory Python course after students have worked with functions, dataclasses, lists, and loops. The instructor documentation includes guidance for introducing Drafter, structuring assignments, and helping students move from guided exercises to independent projects.
 
-@dataclass
-class State:
-    counter: int
+* [Why Drafter?](https://drafter-edu.github.io/drafter/teach/why-drafter/) explains the pedagogical goals and compares Drafter with alternatives such as Flask, Streamlit, and raw web development.
+* [Lesson plans](https://drafter-edu.github.io/drafter/teach/lesson-plans/) provide materials for teaching the first Drafter application, forms and state, and testing.
+* [Project ideas](https://drafter-edu.github.io/drafter/teach/project-ideas/) provide starting points for student assignments and larger projects.
+* [Teaching with Drafter](https://drafter-edu.github.io/drafter/teach/) collects the full instructor documentation.
 
-@route
-def index(state: State) -> Page:
-    return Page(state, [
-        "Welcome to Drafter!",
-        "Click the button below.",
-        Button("Increase the count", increment_counter)
-    ])
+# Drafter Development
 
-@route
-def increment_counter(state: State) -> Page:
-    state.counter += 1
-    return Page(state, [
-      "You've clicked the button " + str(state.counter) + " times",
-      Button("Click again", increment_counter)
-    ])
-
-start_server(State(0))
-```
-
-Want to see it in action and try it yourself? [Try Drafter Online (in BlockPy)](https://blockpy.cis.udel.edu/assignments/load?assignment_group_url=drafter_examples)
-
-# Explore Tutorials
-
-* [Cookie Clicker](https://drafter-edu.github.io/drafter/workbook/index.html#cookie-clicker): Click cookies to earn more cookies. Learn state management!
-* [Bank Account](https://drafter-edu.github.io/drafter/workbook/index.html#bank-account): Manage deposits and withdrawals in a simulated bank system.
-* [Simple Adventure Game](https://drafter-edu.github.io/drafter/workbook/index.html#simple-adventure-game): Explore a world of decisions and find the treasure.
-* [Store](https://drafter-edu.github.io/drafter/workbook/index.html#store): Create a shop where users can purchase items.
-* More examples can be found [here](https://drafter-edu.github.io/drafter/examples/examples.html)!
-
-We also have this [Google Doc worksheet assignment](https://docs.google.com/document/d/1T2HOqBNXebUUnE6dVRNTLcgE8f4A58IaewJ-LSV1n8k/copy) that we use in our CS1.
-
-# Documentation
-
-Ready to learn more? [Check out the student-friendly Drafter Documentation!](https://drafter-edu.github.io/drafter/quickstart/quickstart.html)
-
-# About Drafter's Team
-
-Drafter was created to simplify web development for students learning Python. The team includes passionate educators and developers dedicated to advancing programming education.
-
-- Austin Cory Bart ([https://acbart.com/](https://acbart.com))
-- Nazim Karaca
-
-Follow us!
+Drafter is open source. Source code, bug reports, feature requests, and discussions are hosted on GitHub.
 
 * [GitHub Repository](https://github.com/drafter-edu/drafter)
 * [Discussion Board](https://github.com/drafter-edu/drafter/discussions)
 * [Issue Tracker](https://github.com/drafter-edu/drafter/issues)
+* [Developer Documentation](https://drafter-edu.github.io/drafter/dev/)
+* [Contributing to Drafter](https://drafter-edu.github.io/drafter/dev/contributing/)
+
+# About Drafter
+
+Drafter was created to make interactive application development accessible within an introductory Python course.
+
+* Austin Cory Bart ([acbart.com](https://acbart.com/))
+* Nazim Karaca
