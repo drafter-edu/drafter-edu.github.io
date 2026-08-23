@@ -1,8 +1,6 @@
 ---
 title: Drafter
-feature_text: |
-  ## Drafter
-  Build interactive, shareable web applications with the Python students already know.
+description: Build interactive, shareable web applications with the Python students already know.
 excerpt: "Drafter helps students build interactive, shareable web applications using familiar Python concepts such as functions, dataclasses, and lists."
 ---
 
